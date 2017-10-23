@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import { connect} from 'react-redux';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router';
+
 
 
 class Header extends Component {
@@ -8,11 +9,11 @@ class Header extends Component {
   renderLinks(){
     if(this.props.authenticated ){
 
-      return
+      return(
           <li className="nav-item" >
               <Link className="nav-link" to="/signout" >Sign out </Link>
           </li>
-
+            );
     }else{
 
       return [
