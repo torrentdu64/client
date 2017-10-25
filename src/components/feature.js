@@ -6,7 +6,7 @@ import * as actions from '../actions';
 class Feature extends Component {
   render(){
       return(
-          <div>feature</div>
+          <div>{this.props.message}</div>
 
 
 
@@ -14,6 +14,9 @@ class Feature extends Component {
   }
 }
 
+function mapStateToProps(state){
+    return { message: state.auth.message};
+}
 
-export default Feature;
+export default connect(mapStateToProps, actions)(Feature);
 
